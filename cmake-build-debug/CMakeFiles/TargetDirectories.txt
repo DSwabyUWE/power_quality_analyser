@@ -1,0 +1,3 @@
+C:/Users/d3-swaby/CLionProjects/power_quality_analyser/cmake-build-debug/CMakeFiles/power_quality_analyser.dir
+C:/Users/d3-swaby/CLionProjects/power_quality_analyser/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/d3-swaby/CLionProjects/power_quality_analyser/cmake-build-debug/CMakeFiles/rebuild_cache.dir
