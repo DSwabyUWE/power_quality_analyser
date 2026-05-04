@@ -49,6 +49,7 @@ int check_compliance(double rms);
 double compute_mean_frequency(WaveformSample *samples, int n);
 double compute_mean_powerfactor(WaveformSample *samples, int n);
 double compute_mean_thd(WaveformSample *samples, int n);
+double compute_std_dev(WaveformSample *samples, int n, int phase);
 void analyse_all_phases(WaveformSample *samples, int n, PhaseResult *results);
 
 #endif
