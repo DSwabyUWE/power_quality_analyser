@@ -36,6 +36,8 @@ int main(int argc, char *argv[]) {
     double mean_freq = compute_mean_frequency(samples, sample_count);
     double mean_pf   = compute_mean_powerfactor(samples, sample_count);
     double mean_thd  = compute_mean_thd(samples, sample_count);
+    // COMMIT 6 - prints how mnay rows from the CSV were processed //
+    printf("Samples analysed: %d\n\n", sample_count);
 
     printf("\n--- results ---\n\n");
 

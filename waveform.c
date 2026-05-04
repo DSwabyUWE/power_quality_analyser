@@ -3,12 +3,18 @@
 #include <stdio.h>
 #include <string.h>
 
-// easy phase pass //
+// COMMIT 6 - cleaner   //
 
 double get_phase_voltage(WaveformSample *sample, int phase) {
-    if (phase == PHASE_A) return sample->phase_A_voltage;
-    if (phase == PHASE_B) return sample->phase_B_voltage;
-    return sample->phase_C_voltage;
+    if (phase == PHASE_A) {
+        return sample->phase_A_voltage;
+    }
+    else if (phase == PHASE_B) {
+        return sample->phase_B_voltage;
+    }
+    else {
+        return sample->phase_C_voltage;
+    }
 }
 
 // RMS function ------ squares every voltage sample, add tem all up and divide by how many there are, then square root it. //
