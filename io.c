@@ -28,8 +28,9 @@ static int count_rows(const char *filename) {
 
 WaveformSample *load_csv(const char *filename, int *row_count) {
     int n = count_rows(filename);
+// error message -  file missing or empty  //
     if (n <= 0) {
-        printf("ERROR: could not open file '%s' or file is empty.\n", filename);
+        printf("ERROR: file '%s' missing or empty.\n", filename);
         *row_count = 0;
         return NULL;
     }
