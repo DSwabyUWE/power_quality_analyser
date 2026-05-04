@@ -124,6 +124,7 @@ void analyse_all_phases(WaveformSample *samples, int n, PhaseResult *results) {
         (results + phase)->dc_offset     = compute_dc_offset(samples, n, phase);
         (results + phase)->clipped_count = count_clipped(samples, n, phase);
         (results + phase)->compliant     = check_compliance((results + phase)->rms);
+        (results + phase)->std_dev = compute_std_dev(samples, n, phase);
     }
 }
 

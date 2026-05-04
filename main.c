@@ -45,9 +45,10 @@ int main(int argc, char *argv[]) {
         printf("%s:\n", r->name);
         printf("  RMS             = %.4f V  (%s)\n",
                r->rms, r->compliant ? "COMPLIANT" : "OUT OF TOLERANCE");
-        printf("  Peak-to-Peak    = %.4f V\n", r->peak_to_peak);
+        printf("  Peak to Peak    = %.4f V\n", r->peak_to_peak);
         printf("  DC Offset       = %.6f V\n", r->dc_offset);
-        printf("  Clipped Samples = %d\n\n", r->clipped_count);
+        printf("  clipped samples = %d\n\n", r->clipped_count);
+        printf("  Standard Deviation   = %.4f V\n", r->std_dev);
     }
 // free memory alocated with malloc //
     printf("Mean Frequency   : %.4f Hz\n", mean_freq);

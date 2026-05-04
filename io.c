@@ -101,9 +101,10 @@ void write_report(PhaseResult *results, double mean_freq, double mean_pf, double
         fprintf(fp, " %s\n", r->name);
         fprintf(fp, "------------------------------------------------------------\n");
         fprintf(fp, "  RMS Voltage      : %.4f V\n", r->rms);
-        fprintf(fp, "  Peak-to-Peak     : %.4f V\n", r->peak_to_peak);
+        fprintf(fp, "  Peak to Peak     : %.4f V\n", r->peak_to_peak);
         fprintf(fp, "  DC Offset        : %.6f V\n", r->dc_offset);
-        fprintf(fp, "  Clipped Samples  : %d\n", r->clipped_count);
+        fprintf(fp, "  Standard Deviation   : %.4f V\n", r->std_dev);
+        fprintf(fp, "  clipped samples  : %d\n", r->clipped_count);
         fprintf(fp, "  EN 50160 Status  : %s\n\n",
                 r->compliant ? "COMPLIANT" : "OUT OF TOLERANCE");
     }

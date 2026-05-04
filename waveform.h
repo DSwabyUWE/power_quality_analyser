@@ -37,6 +37,7 @@ typedef struct {
     double dc_offset;
     int    clipped_count;
     int    compliant;
+    double std_dev;
 } PhaseResult;
 
 // function prototypes //
