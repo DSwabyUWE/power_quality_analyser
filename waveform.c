@@ -89,6 +89,8 @@ int check_compliance(double rms) {
 // loop through all samples and average the relevent collumn //
 
 double compute_mean_frequency(WaveformSample *samples, int n) {
+    // COMMIT 7 - input validation cmf //
+    if (n <= 0) return 0.0;
     double sum = 0.0;
     int i;
     for (i = 0; i < n; i++) {
@@ -98,6 +100,8 @@ double compute_mean_frequency(WaveformSample *samples, int n) {
 }
 
 double compute_mean_powerfactor(WaveformSample *samples, int n) {
+    // COMMIT 7 - input validation cmp //
+    if (n <= 0) return 0.0;
     double sum = 0.0;
     int i;
     for (i = 0; i < n; i++) {
@@ -107,6 +111,8 @@ double compute_mean_powerfactor(WaveformSample *samples, int n) {
 }
 
 double compute_mean_thd(WaveformSample *samples, int n) {
+    // COMMIT 7 - input validation tbh //
+    if (n <= 0) return 0.0;
     double sum = 0.0;
     int i;
     for (i = 0; i < n; i++) {
