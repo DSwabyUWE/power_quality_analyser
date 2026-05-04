@@ -56,6 +56,12 @@ int main(int argc, char *argv[]) {
     printf("Mean Frequency   : %.4f Hz\n", mean_freq);
     printf("Mean Power Factor: %.4f\n", mean_pf);
     printf("Mean THD         : %.4f %%\n\n", mean_thd);
+    // LAST COMMIT - system status check //
+    if (mean_thd > 5.0) {
+        printf("high harmonic distortion detected (%.2f%%)\n", mean_thd);
+    } else {
+        printf("THD levels  acceptable \n");
+    }
 
     write_report(results, mean_freq, mean_pf, mean_thd, sample_count);
 
