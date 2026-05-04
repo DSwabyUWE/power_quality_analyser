@@ -140,17 +140,18 @@ void analyse_all_phases(WaveformSample *samples, int n, PhaseResult *results) {
     }
 }
 
-// Standard deviation function - measures how much the voltage varies from the average //
+// COMMIT 9 - std and rms values were showing same //
 
 double compute_std_dev(WaveformSample *samples, int n, int phase) {
+    if (n <= 0) return 0.0;
     double mean = compute_dc_offset(samples, n, phase);
     double sum = 0.0;
+    int i;
 
-    for (int i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         double v = get_phase_voltage(samples + i, phase);
         double diff = v - mean;
         sum += diff * diff;
     }
-
-    return sqrt(sum / n);
+    return sqrt(sum / (n - 1));
 }
